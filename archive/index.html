@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TV쿠폰 302개 전체 혜택 아카이브 목록 - TVCOUPON</title>
-    <meta name="description" content="TV쿠폰 22년 역사상 발급된 302개 전수 모바일 쿠폰, 핫딜, 제휴 리워드 전체 디렉토리입니다.">
+    <meta name="description" content="TV쿠폰 22년 역사상 발급된 302개 전수 모바일 쿠폰, 핫딜 디렉토리입니다.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@
     <main class="flex-1 max-w-7xl mx-auto px-4 py-10 w-full">
         <div class="mb-8">
             <h1 class="text-3xl font-black text-slate-900 mb-2">📦 TV쿠폰 302개 전수 혜택 아카이브</h1>
-            <p class="text-slate-500 text-sm">2004년부터 보존된 TV쿠폰의 302개 전체 쿠폰 및 제휴 리워드 디렉토리입니다.</p>
+            <p class="text-slate-500 text-sm">2004년부터 보존된 TV쿠폰의 302개 전체 브랜드 할인쿠폰 및 모바일 금액권 디렉토리입니다.</p>
         </div>
 
         <div id="archive-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -49,8 +49,7 @@
             
             deals.forEach(deal => {
                 const item = document.createElement('a');
-                item.href = deal.is_partner ? deal.partner_link : `/bbs/board.php?bo_table=free&wr_id=${deal.idx}`;
-                if (deal.is_partner) { item.target = '_blank'; item.rel = 'noopener'; }
+                item.href = `/bbs/board.php?bo_table=free&wr_id=${deal.idx}`;
                 item.className = 'bg-white p-4 rounded-xl border border-slate-200 hover:border-rose-500 shadow-sm hover:shadow transition flex flex-col justify-between';
                 item.innerHTML = `
                     <div>
