@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV쿠폰 302개 전체 혜택 아카이브 목록 - TVCOUPON</title>
+    <meta name="description" content="TV쿠폰 22년 역사상 발급된 302개 전수 모바일 쿠폰, 핫딜, 제휴 리워드 전체 디렉토리입니다.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <style>body { font-family: 'Noto Sans KR', sans-serif; background-color: #f8fafc; color: #1e293b; }</style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-rose-600 flex items-center justify-center text-white font-black text-sm">TV</div>
+                <span class="text-lg font-black text-slate-900">TV<span class="text-rose-600">COUPON</span></span>
+            </a>
+            <div class="flex items-center gap-4 text-xs font-bold text-slate-600">
+                <a href="/" class="hover:text-rose-600">홈으로</a>
+                <span class="text-rose-600">전체 아카이브 (302)</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 max-w-7xl mx-auto px-4 py-10 w-full">
+        <div class="mb-8">
+            <h1 class="text-3xl font-black text-slate-900 mb-2">📦 TV쿠폰 302개 전수 혜택 아카이브</h1>
+            <p class="text-slate-500 text-sm">2004년부터 보존된 TV쿠폰의 302개 전체 쿠폰 및 제휴 리워드 디렉토리입니다.</p>
+        </div>
+
+        <div id="archive-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Injected via JS -->
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-500 text-xs py-8 text-center mt-auto">
+        <p>© 2004-2026 TVCOUPON.CO.KR All rights reserved.</p>
+    </footer>
+
+    <script src="/deals_data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const list = document.getElementById('archive-list');
+            const deals = window.TVCOUPON_DEALS || [];
+            
+            deals.forEach(deal => {
+                const item = document.createElement('a');
+                item.href = deal.is_partner ? deal.partner_link : `/bbs/board.php?bo_table=free&wr_id=${deal.idx}`;
+                if (deal.is_partner) { item.target = '_blank'; item.rel = 'noopener'; }
+                item.className = 'bg-white p-4 rounded-xl border border-slate-200 hover:border-rose-500 shadow-sm hover:shadow transition flex flex-col justify-between';
+                item.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between text-[11px] text-slate-400 mb-1">
+                            <span class="font-bold text-rose-600">${deal.category_name}</span>
+                            <span>${deal.date}</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-sm leading-snug line-clamp-1 mb-2">${deal.title}</h3>
+                    </div>
+                    <div class="flex items-center justify-between text-xs pt-2 border-t border-slate-100">
+                        <span class="text-slate-400">#${deal.idx}</span>
+                        <span class="font-black text-slate-900">${deal.sale_price.toLocaleString()}원</span>
+                    </div>
+                `;
+                list.appendChild(item);
+            });
+        });
+    </script>
+</body>
+</html>
