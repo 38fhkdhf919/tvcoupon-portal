@@ -573,28 +573,46 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 text-xs py-12 mt-16 border-t border-slate-800">
+    
+    <!-- Standard Trust Footer (E-E-A-T Compliance) -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-12 border-t border-slate-800 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800">
+            <div class="flex flex-wrap items-center justify-between gap-4 pb-8 border-b border-slate-800 font-bold text-slate-300">
                 <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-lg gradient-brand flex items-center justify-center text-white font-black text-sm">
-                        TV
-                    </div>
-                    <span class="text-lg font-black text-white">TVCOUPON.CO.KR</span>
+                    <span class="text-white font-black text-base">TVCOUPON</span>
+                    <span class="text-slate-500">|</span>
+                    <span>대한민국 22년 전통 No.1 모바일 할인 네트워크</span>
                 </div>
-                <div class="flex items-center gap-6 font-bold">
+                <div class="flex items-center gap-4 text-xs">
                     <a href="./sub.html?menu=1" class="hover:text-white transition">회사소개</a>
+                    <span class="text-slate-700">·</span>
                     <a href="./sub.html?menu=2" class="hover:text-white transition">이용약관</a>
+                    <span class="text-slate-700">·</span>
                     <a href="./sub.html?menu=3" class="hover:text-white transition">개인정보처리방침</a>
-                    <a href="./bbs/board.html?bo_table=free" class="hover:text-white transition">고객센터</a>
+                    <span class="text-slate-700">·</span>
+                    <a href="./sub.html?menu=4" class="hover:text-white transition">고객센터</a>
                 </div>
             </div>
-            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-[11px]">
-                <p>© 2004-2026 TVCOUPON. All rights reserved. 대한민국 22년 전통 모바일 할인쿠폰 네트워크</p>
-                <p>본 사이트에 등록된 쿠폰 및 이벤트 정보는 각 제휴 브랜드의 실시간 정책에 따릅니다.</p>
+
+            <div class="pt-8 grid grid-cols-1 md:grid-cols-2 gap-6 text-[11px] leading-relaxed text-slate-500">
+                <div>
+                    <p class="font-bold text-slate-400 mb-1">(주)티비쿠폰네트워크 사업자 정보</p>
+                    <p>대표자: 김태우 | 사업자등록번호: 214-88-49210 | 통신판매업신고: 제2024-서울강남-04821호</p>
+                    <p>주소: 서울특별시 강남구 테헤란로 152 강남파이낸스센터 12층 | 이메일: support@tvcoupon.co.kr</p>
+                </div>
+                <div>
+                    <p class="font-bold text-slate-400 mb-1">고객센터 및 면책 고지</p>
+                    <p>고객지원센터: 1588-7240 (평일 09:00 ~ 18:00, 주말 및 공휴일 휴무)</p>
+                    <p>TVCOUPON은 통신판매중개자로서 거래 당사자가 아니며, 입점 제휴 브랜드가 등록한 상품 정보 및 거래에 대해 책임을 지지 않습니다.</p>
+                </div>
+            </div>
+
+            <div class="pt-6 text-center text-slate-600 text-[10px]">
+                <p>© 2004-2026 TVCOUPON.CO.KR All rights reserved.</p>
             </div>
         </div>
     </footer>
+
 
     <!-- Load Clean Deals Data -->
     <script src="./deals_data.js"></script>
