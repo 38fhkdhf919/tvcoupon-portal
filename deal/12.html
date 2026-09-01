@@ -25,6 +25,10 @@
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "[\ub300\uc804\ub454\uc0b0\ud0c0\uc784\uc6d4\ub4dc\uc810] \ud22c\uc378\ud50c\ub808\uc774\uc2a4 \ub5a0\uba39\ub294 \ub9c8\uc2a4\uce74\ud3ec\ub124 \ud2f0\ub77c\ubbf8\uc218 \uc870\uac01 30% \ud560\uc778\ucfe0\ud3f0",
+      "image": [
+        "https://tvcoupon.co.kr/og-image.png",
+        "https://tvcoupon.co.kr/favicon.png"
+      ],
       "description": "\ubd80\ub2f4 \uc5c6\ub294 \uac00\uaca9\uc5d0 \uc990\uae30\ub294 \ud22c\uc378\ud50c\ub808\uc774\uc2a4\uc758 \ubca0\uc2a4\ud2b8\uc140\ub7ec, \ub5a0\uba39\ub294 \ub9c8\uc2a4\uce74\ud3ec\ub124 \ud2f0\ub77c\ubbf8\uc218 \uc870\uac01 30% \ud560\uc778 \uc0c1\ud488\uad8c\uc785\ub2c8\ub2e4. \uc774\ud0c8\ub9ac\uc544\uc0b0 \ub9c8\uc2a4\uce74\ud3ec\ub124 \uce58\uc988\uc640 \uc9c4\ud55c \uc5d0\uc2a4\ud504\ub808\uc18c \uc2dc\ub7fd\uc758 \uc815\ud1b5 \ud2f0\ub77c\ubbf8\uc218. \uc815\uc0c1\uac00 6,500\uc6d0\uc5d0\uc11c 4,600\uc6d0\uc73c\ub85c \ud560\uc778 \ubc1c\uae09\ub418\uc5b4 \uc2e4\uc18d \uc788\ub294 \ud734\uc2dd\uc744 \uc120\uc0ac\ud569\ub2c8\ub2e4.",
       "brand": {
         "@type": "Brand",
@@ -34,8 +38,44 @@
         "@type": "Offer",
         "price": "4600",
         "priceCurrency": "KRW",
+        "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
-        "url": "https://tvcoupon.co.kr/deal/12.html"
+        "url": "https://tvcoupon.co.kr/deal/12.html",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": 0,
+            "currency": "KRW"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "KR"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "KR",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 90,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
       }
     }
     </script>
