@@ -1,4 +1,5 @@
-# TVCOUPON 233 Clean Historical Post Redirects
+# TVCOUPON 233 Clean Historical Post Redirects & 301 Permanent Redirects
+/index.php* / 301
 /bbs/board.php* /bbs/board.html 200
 /board/after_board.php* /board/after_board.html 200
 /deal.view.php* /deal.view.html 200
