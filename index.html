@@ -9,6 +9,7 @@
     <meta name="description" content="2004년부터 이어온 22년 전통의 TV쿠폰 공식 포털! 전국 외식, 모바일 상품권, 기프티콘, 영화/레저 할인까지 검증된 실시간 최저가 쿠폰을 100% 무료로 확인하세요.">
     <meta name="keywords" content="TV쿠폰, 티비쿠폰, tvcoupon, 모바일쿠폰, 할인쿠폰, 외식할인, 기프티콘, 모바일금액권, 핫딜, 편의점쿠폰, 영화할인권">
     <link rel="canonical" href="https://tvcoupon.co.kr/">
+    <link rel="alternate" type="application/rss+xml" title="TV쿠폰 RSS 피드" href="https://tvcoupon.co.kr/rss.xml">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -56,8 +57,8 @@
                 <nav class="hidden md:flex items-center gap-1 font-bold text-sm text-slate-600">
                     <a href="/" class="px-3.5 py-2 rounded-lg bg-rose-50 text-rose-600">홈</a>
                     <a href="/archive/" class="px-3.5 py-2 rounded-lg hover:text-rose-600 transition">전체 쿠폰 (232)</a>
-                    <a href="./deal/18.htmlbo_table=free" class="px-3.5 py-2 rounded-lg hover:text-rose-600 transition">쿠폰 이용안내</a>
-                    <a href="./sub.html?menu=2" class="px-3.5 py-2 rounded-lg hover:text-rose-600 transition">가맹 제휴문의</a>
+                    <a href="/archive/" class="px-3.5 py-2 rounded-lg hover:text-rose-600 transition">쿠폰 이용안내</a>
+                    <a href="/sub.html?menu=2" class="px-3.5 py-2 rounded-lg hover:text-rose-600 transition">가맹 제휴문의</a>
                 </nav>
 
                 <!-- Status Badge -->
@@ -586,13 +587,13 @@
                     <span>대한민국 22년 전통 No.1 모바일 할인 네트워크</span>
                 </div>
                 <div class="flex items-center gap-4 text-xs">
-                    <a href="./sub.html?menu=1" class="hover:text-white transition">회사소개</a>
+                    <a href="/sub.html?menu=1" class="hover:text-white transition">회사소개</a>
                     <span class="text-slate-700">·</span>
-                    <a href="./sub.html?menu=2" class="hover:text-white transition">이용약관</a>
+                    <a href="/sub.html?menu=2" class="hover:text-white transition">이용약관</a>
                     <span class="text-slate-700">·</span>
-                    <a href="./sub.html?menu=3" class="hover:text-white transition">개인정보처리방침</a>
+                    <a href="/sub.html?menu=3" class="hover:text-white transition">개인정보처리방침</a>
                     <span class="text-slate-700">·</span>
-                    <a href="./sub.html?menu=4" class="hover:text-white transition">고객센터</a>
+                    <a href="/sub.html?menu=4" class="hover:text-white transition">고객센터</a>
                 </div>
             </div>
 
@@ -638,7 +639,7 @@
                             <span class="text-[11px] text-slate-400 font-semibold">${deal.region}</span>
                         </div>
                         <h4 class="font-black text-slate-900 text-base leading-snug mb-2 line-clamp-2">
-                            <a href="./deal/18.htmlbo_table=free&wr_id=${deal.idx}" class="hover:text-rose-600 transition">${deal.title}</a>
+                            <a href="/deal/${deal.idx}" class="hover:text-rose-600 transition">${deal.title}</a>
                         </h4>
                         <p class="text-slate-500 text-xs line-clamp-2 leading-relaxed mb-4">
                             ${deal.description}
@@ -649,7 +650,7 @@
                             ${deal.discount_percent > 0 ? `<span class="text-rose-600 font-black text-lg mr-1">${deal.discount_percent}%</span>` : ''}
                             <span class="font-black text-slate-900 text-base">${deal.sale_price.toLocaleString()}원</span>
                         </div>
-                        <a href="./deal/18.htmlbo_table=free&wr_id=${deal.idx}" class="px-3.5 py-1.5 rounded-lg bg-slate-900 hover:bg-rose-600 text-white font-bold text-xs transition">
+                        <a href="/deal/${deal.idx}" class="px-3.5 py-1.5 rounded-lg bg-slate-900 hover:bg-rose-600 text-white font-bold text-xs transition">
                             상세보기
                         </a>
                     </div>
